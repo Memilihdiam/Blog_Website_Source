@@ -1,0 +1,19 @@
+{
+  // Nama untuk lingkungan Codespace Anda
+  "name": "Flask and MongoDB",
+
+  // Menentukan file Docker Compose yang akan digunakan
+  "dockerComposeFile": "docker-compose.yml",
+
+  // Menentukan service mana yang menjadi container utama untuk development
+  "service": "app",
+
+  // Menentukan workspace folder di dalam container
+  "workspaceFolder": "/workspaces/Blog_Website_Source",
+
+  // Perintah yang dijalankan setelah container dibuat
+  "postCreateCommand": "pip install --user -r requirements.txt",
+
+  // Port yang akan di-forward dari container ke mesin lokal Anda
+  "forwardPorts": [3120, 27017]
+}

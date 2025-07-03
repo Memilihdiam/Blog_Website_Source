@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  # Service untuk aplikasi Flask
+  app:
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+    volumes:
+      # Mount source code proyek ke dalam container
+      - ..:/workspaces/Blog_Website_Source:cached
+    # Perintah untuk menjaga container tetap berjalan
+    command: sleep infinity
+    depends_on:
+      - mongodb
+
+  # Service untuk database MongoDB
+  mongodb:
+    image: mongo:latest
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
