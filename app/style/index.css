@@ -3,3 +3,12 @@ body{
     padding:0;
 }
 
+#Login-Form{
+    padding:10px;
+}
+
+#Sign-Form{
+    display:none;
+    padding:10px;
+}
+

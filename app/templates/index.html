@@ -33,7 +33,7 @@
                         </div>
                     </form>
                 </div>
-                <div class="Sign-Form" style="display:none;" class="bg-light text-center border position-absolute top-50 start-50 translate-middle">
+                <div id="Sign-Form" class="bg-light text-center border position-absolute top-50 start-50 translate-middle">
                     <h1>Sign Up</h1>
                     <form action="/signup" method="post">
                         <div class="form-group text-center">
@@ -42,7 +42,7 @@
                                 <input type="text" class="form-control" name="username" id="username" placeholder="Username">
                             </div>
                             <div class="input-group mb-3">
-                                <span class="input-group-text">Username</span>
+                                <span class="input-group-text">Password</span>
                                 <input type="password" name="password" class="form-control" id="password" placeholder="Password">
                             </div>
                             <div>
@@ -85,13 +85,19 @@
         }
 
         function shLog(){
-            document.getElementById('Login-Form').style.display = 'block';
-            document.getElementById('Sign-Form').style.display = 'none';
+            var log = document.getElementById('Login-Form')
+            var sign = document.getElementById('Sign-Form')
+
+            log.style.display = 'block';
+            sign.style.display = 'none';
         }
 
         function shSign(){
-            document.getElementById('Login-Form').style.display = 'none';
-            document.getElementById('Sign-Form').style.display = 'block';
+            var log = document.getElementById('Login-Form')
+            var sign = document.getElementById('Sign-Form')
+
+            log.style.display = 'none';
+            sign.style.display = 'block';
         }
     </script>
 </body>
